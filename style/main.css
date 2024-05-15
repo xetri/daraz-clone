@@ -1,0 +1,192 @@
+:root {
+    --nav-height : 3.5rem;
+    --color: #999;
+    --body-color: #e7e8ec;
+    --primary-color: #f85606;
+    --font-size: 18px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color);
+    font-size : var(--font-size);
+    background-color: var(--body-color);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: var(--nav-height);
+    padding : 0.8rem;
+    background-color: var(--primary-color);
+}
+
+nav .linksbar {
+    display : flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin : -0.5rem 0 0.4rem 0;
+    color: white;
+    font-size: 60%;
+}
+
+.navbar {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .hero {
+    width: 120px;
+    height: 48px;
+}
+
+.navbar .searchbar {
+    --border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    flex: 2;
+    border-radius: var(--border-radius);
+    margin-top : 0.2rem;
+}
+
+.navbar .searchbar input {
+    width: 100%;
+    padding : 9px 19px;
+    border : none;
+    outline: none;
+    border-radius: var(--border-radius);
+}
+
+.navbar .searchbar input::placeholder {
+    color : #a3a3a3;
+}
+
+.navbar .searchbar button {
+    --bg-color: #FFE1D2;
+    --color: #F9641B;
+    --border-radius: 8px;
+
+    display : flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding : 5px 14px;
+    margin : 0 5px;
+    border-radius : var(--border-radius);
+}
+
+.navbar .menu {
+    color: white;
+    display : flex;
+    align-items: center;
+    margin : 0 1.2rem 0 0;
+}
+
+
+.navbar .menu .auth {
+    font-size: 12.5px !important;
+    display : flex;
+    align-items: center;
+    gap : 0.5rem;
+}
+
+.navbar .menu .btn {
+    transition : 50ms ease-in;
+    cursor: pointer;
+    border-radius : 0.5rem;
+    padding : 0.6rem;
+}
+
+.navbar .menu .btn:hover {
+    background-color: #DF4D05;
+}
+
+.navbar .menu .btn i {
+    margin-right : 10px;
+}
+
+main {
+    padding : calc( var(--nav-height) + 2.4rem) 1rem 0 1rem;
+}
+
+main .topbar {
+    display : flex;
+    gap : 1rem;
+}
+
+main .topbar .categorybox {
+    background-color: white;
+    border-radius: 12px;
+    color : #757575;
+}
+
+main .topbar .categorybox ul {
+    width : 210px;
+    font-size: 12px;
+    padding : 10px 0;
+}
+
+main .topbar .categorybox ul li {
+    cursor : pointer;
+    padding: 6px 8px;
+}
+
+main .topbar .categorybox ul li:hover {
+    background-color: #f5f5f5;
+    color : var(--primary-color);
+}
+
+
+main .slider {
+    display : flex;
+}
+
+main .slider .slide {
+    display : flex;
+    aspect-ratio: 16 / 9;
+    overflow-x : hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+main .slider .slide img {
+    flex : 1 0 100%;
+    scroll-snap-type: start;
+    object-fit: cover;
+}
+
+main .slider .slide-nav {
+    display : flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom : 1.25rem;
+    left : 50%;
+    transform : translateX(-50%);
+    z-index : 1;
+}
+
+main .slider .slide-nav a {
+    width : 0.75rem;
+    height : 0.75rem;
+    border-radius : 50%;
+    background-color : silver;
+    opacity : 0.75;
+    transition : opacity ease 250ms;
+}
+
+main .slider .slide-nav a:hover {
+    opacity: 1;
+}
+
+footer {
+    margin-top : 1rem;
+}
